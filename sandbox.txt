@@ -1,28 +1,19 @@
-package main
+func isBalanced(root *TreeNode) bool {
+	left := visitLeft(root.Left) // visit left
+	right := visitRight(root.Right) // visit right
+	return left - right <=1
+}
 
-// [1,4], 2 // 1,2 4,5
-// [1,2], 2 // 1,2, 2,3
-
-func findPoisonedDuration(timeSeries []int, duration int) int {
-
-	result := []int{}
-
-	for _,v := range timeSeries {
-
-
-
-		if result[len(result)-1] == v {
-
-			result = append(result, v + duration - 1)
-
-		} else {
-
-		    result = append(result, []int{v,v + duration - 1}...)
-
-		}
-
+func visitLeft(root *TreeNode) {
+	if root != nil {
+		return 0
 	}
+	return 1 + visitLeft(root.Left)
+}
 
-	return len(result)
-
+func visitRight(root *TreeNode) {
+	if root != nil {
+		return 0
+	}
+	return 1 + visitRight(root.Right)
 }

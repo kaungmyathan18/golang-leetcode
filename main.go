@@ -154,35 +154,38 @@ func main() {
 	//fmt.Println(fib(4))
 	// fmt.Println(findLengthOfLCIS([]int{1, 3, 5, 4, 7}))
 	//fmt.Println(rotateDigit(10))
-	fmt.Println("\nExample 1:")
-	box1 := [][]byte{{'#', '.', '#'}}
-	result1 := rotateTheBox(box1)
-	printGrid(result1)
+	// fmt.Println("\nExample 1:")
+	// box1 := [][]byte{{'#', '.', '#'}}
+	// result1 := rotateTheBox(box1)
+	// printGrid(result1)
 
-	fmt.Println("\nExample 2:")
-	box2 := [][]byte{
-		{'#', '.', '*', '.'},
-		{'#', '#', '*', '.'},
-	}
-	result2 := rotateTheBox(box2)
-	printGrid(result2)
+	// fmt.Println("\nExample 2:")
+	// box2 := [][]byte{
+	// 	{'#', '.', '*', '.'},
+	// 	{'#', '#', '*', '.'},
+	// }
+	// result2 := rotateTheBox(box2)
+	// printGrid(result2)
 
-	fmt.Println("\nExample 3:")
-	box3 := [][]byte{
-		{'#', '#', '*', '.', '*', '.'},
-		{'#', '#', '#', '*', '.', '.'},
-		{'#', '#', '#', '.', '#', '.'},
-	}
-	result3 := rotateTheBox(box3)
-	printGrid(result3)
+	// fmt.Println("\nExample 3:")
+	// box3 := [][]byte{
+	// 	{'#', '#', '*', '.', '*', '.'},
+	// 	{'#', '#', '#', '*', '.', '.'},
+	// 	{'#', '#', '#', '.', '#', '.'},
+	// }
+	// result3 := rotateTheBox(box3)
+	// printGrid(result3)
+	fmt.Println(isBalanced(&TreeNode{Val: 1, Left: &TreeNode{Val: 2, Left: &TreeNode{Val: 5}}, Right: &TreeNode{Val: 3}}))
+	fmt.Println(isBalanced(&TreeNode{Val: 1, Left: nil, Right: &TreeNode{Val: 2, Left: &TreeNode{Val: 3}}}))
+	fmt.Println(isBalanced(&TreeNode{Val: 1, Left: nil, Right: nil}))
 }
 
-func printGrid(grid [][]byte) {
-	for i := 0; i < len(grid); i++ {
-		for j := 0; j < len(grid[i]); j++ {
-			fmt.Printf("%c ", grid[i][j])
-			// fmt.Print(grid[i][j])
-		}
-		fmt.Println()
-	}
-}
+// func printGrid(grid [][]byte) {
+// 	for i := 0; i < len(grid); i++ {
+// 		for j := 0; j < len(grid[i]); j++ {
+// 			fmt.Printf("%c ", grid[i][j])
+// 			// fmt.Print(grid[i][j])
+// 		}
+// 		fmt.Println()
+// 	}
+// }
