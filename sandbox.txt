@@ -1,19 +1,7 @@
-func isBalanced(root *TreeNode) bool {
-	left := visitLeft(root.Left) // visit left
-	right := visitRight(root.Right) // visit right
-	return left - right <=1
-}
-
-func visitLeft(root *TreeNode) {
-	if root != nil {
-		return 0
+func preorderTraversal(root *TreeNode) []int {
+	if root == nil {
+		return []int{}
 	}
-	return 1 + visitLeft(root.Left)
-}
+	result := []
 
-func visitRight(root *TreeNode) {
-	if root != nil {
-		return 0
-	}
-	return 1 + visitRight(root.Right)
 }
